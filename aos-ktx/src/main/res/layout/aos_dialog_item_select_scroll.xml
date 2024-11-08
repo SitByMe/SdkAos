@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <sbmsdk.aos.dialogx.view.itemselect.PickerHeaderView
+        android:id="@+id/header_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_42"
+        android:background="@android:color/white" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="#f3f3f3" />
+
+    <sbmsdk.aos.widget.text.SearchEditText
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:drawablePadding="@dimen/dp_4"
+        android:paddingHorizontal="@dimen/dp_16"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/common_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <sbmsdk.aos.widget.wheel.WheelView
+            android:id="@+id/wheel_items"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_8" />
+    </LinearLayout>
+</LinearLayout>

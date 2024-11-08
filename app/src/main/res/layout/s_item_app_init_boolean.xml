@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/dp_10">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBottom_toBottomOf="@id/radio_group"
+        app:layout_constraintEnd_toStartOf="@id/radio_group"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/radio_group"
+        tools:text="配置一" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_6"
+        android:maxLines="1"
+        android:orientation="horizontal"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_name"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rb_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/dp_4"
+            android:textSize="@dimen/sp_14"
+            tools:text="是" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rb_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:paddingHorizontal="@dimen/dp_4"
+            android:textSize="@dimen/sp_14"
+            tools:text="否" />
+    </RadioGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>

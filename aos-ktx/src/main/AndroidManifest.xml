@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application>
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="sbmsdk.aos.init.AosKtxInitializer"
+                android:value="androidx.startup" />
+        </provider><!--
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="sbmsdk.aos.dialogx.AosWidgetInitializer"
+                android:value="androidx.startup" />
+        </provider>-->
+    </application>
+</manifest>

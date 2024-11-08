@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_8">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_imgs"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_200"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_select_files"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择图片" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_zip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="压缩" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

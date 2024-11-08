@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 支持限定 Drawable 大小的 TextView -->
+    <declare-styleable name="DrawableTextView">
+        <!-- Drawable 尺寸 -->
+        <attr name="drawableSize" />
+        <!-- Drawable 宽度 -->
+        <attr name="drawableWidth" />
+        <!-- Drawable 高度 -->
+        <attr name="drawableHeight" />
+    </declare-styleable>
+
+    <declare-styleable name="ActionEditText">
+        <!-- Drawable 尺寸 -->
+        <attr name="drawableSize" />
+        <!-- Drawable 宽度 -->
+        <attr name="drawableWidth" />
+        <!-- Drawable 高度 -->
+        <attr name="drawableHeight" />
+        <!-- Drawable left -->
+        <attr name="android:drawableLeft" />
+        <!-- Drawable action -->
+        <attr name="drawableAction" format="reference|color" />
+        <attr name="android:drawablePadding" />
+        <attr name="android:hint" />
+        <attr name="android:imeOptions" />
+        <attr name="android:inputType" />
+        <attr name="android:text" />
+        <attr name="android:textSize" />
+    </declare-styleable>
+
+    <declare-styleable name="STextClock">
+        <attr name="textFormat" format="string" />
+    </declare-styleable>
+</resources>

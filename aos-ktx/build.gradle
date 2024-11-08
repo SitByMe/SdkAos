@@ -1,0 +1,81 @@
+apply from: "../base_lib_build.gradle"
+apply from: "../config.gradle"
+
+apply plugin: "kotlin-kapt"
+
+android {
+    namespace 'sbmsdk.aos.ktx'
+
+    kapt {
+        arguments {
+            arg("rxhttp_rxjava", "3.1.4")
+            arg("rxhttp_package", "rxhttp")  //指定RxHttp类包名，可随意指定
+        }
+    }
+}
+
+dependencies {
+
+    api("${dep["androidx.core:core-ktx"]}")
+    api("${dep["androidx.appcompat:appcompat"]}")
+    api("${dep["com.google.android.material:material"]}")
+    api("${dep["androidx.activity:activity-ktx"]}")
+    api("${dep["androidx.startup:startup-runtime"]}")
+
+    api("${dep["com.blankj:utilcodex"]}")
+    api("${dep["com.google.code.gson:gson"]}")
+    implementation project(path: ':aos')
+
+    /*---------- DialogX ----------*/
+
+    // DialogX
+    def DIALOG_X_VERSION = "0.0.46"
+    api "com.github.kongzue.DialogX:DialogX:${DIALOG_X_VERSION}"
+    api "com.github.kongzue.DialogX:DialogXIOSStyle:${DIALOG_X_VERSION}"
+//    api "com.github.kongzue.DialogX:DialogXKongzueStyle:${DIALOG_X_VERSION}"
+//    api "com.github.kongzue.DialogX:DialogXMIUIStyle:${DIALOG_X_VERSION}"
+//    api "com.github.kongzue.DialogX:DialogXMaterialYou:${DIALOG_X_VERSION}"
+
+
+    /*---------- RxHttp ----------*/
+
+    //RxJava
+    api 'io.reactivex.rxjava3:rxjava:3.1.4'
+    api 'io.reactivex.rxjava3:rxandroid:3.0.0'
+
+    //RxHttp
+    def rxHttp_version = '2.8.7'
+    api 'com.squareup.okhttp3:okhttp:4.9.3'
+    api "com.github.liujingxing.rxhttp:rxhttp:$rxHttp_version"
+    // ksp/kapt/annotationProcessor 选其一
+    kapt "com.github.liujingxing.rxhttp:rxhttp-compiler:$rxHttp_version"
+}
+
+task source_code(type: Jar) {
+    archiveClassifier.set('sources')
+    from android.sourceSets.main.java.srcDirs
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                artifact source_code
+                groupId = maven_group_id
+                artifactId = 'aos-ktx'
+                version = lib_version_name
+            }
+        }
+        repositories {
+            maven {
+                allowInsecureProtocol = true
+                url 'http://192.168.1.69:8081/repository/android-release/'
+                credentials {
+                    username 'admin'
+                    password 'admin123'
+                }
+            }
+        }
+    }
+}

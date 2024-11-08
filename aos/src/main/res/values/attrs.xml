@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--drawable size-->
+    <attr name="drawableSize" format="dimension" />
+    <attr name="drawableWidth" format="dimension" />
+    <attr name="drawableHeight" format="dimension" />
+
+    <!-- shape -->
+    <attr name="shape_color" format="color" />
+    <attr name="shape_stroke_color" format="color" />
+    <attr name="shape_stroke_width" format="dimension|reference" />
+    <attr name="shape_radius" format="dimension|reference" />
+    <attr name="shape_radius_top_left" format="dimension|reference" />
+    <attr name="shape_radius_top_right" format="dimension|reference" />
+    <attr name="shape_radius_bottom_left" format="dimension|reference" />
+    <attr name="shape_radius_bottom_right" format="dimension|reference" />
+
+    <declare-styleable name="WheelView">
+        <attr name="wv_gravity">
+            <enum name="center" value="17" />
+            <enum name="left" value="3" />
+            <enum name="right" value="5" />
+        </attr>
+        <attr name="wv_textSize" format="dimension" />
+        <attr name="wv_textColorOut" format="color" />
+        <attr name="wv_textColorCenter" format="color" />
+        <attr name="wv_dividerColor" format="color" />
+        <attr name="wv_lineSpacingMultiplier" format="float" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,47 @@
+apply from: "../base_lib_build.gradle"
+apply from: "../config.gradle"
+
+apply plugin: "kotlin-kapt"
+
+android {
+    namespace 'sbmsdk.aos.debug'
+}
+
+dependencies {
+    api("${dep["androidx.core:core-ktx"]}")
+    api("${dep["androidx.appcompat:appcompat"]}")
+    api("${dep["com.google.android.material:material"]}")
+
+    compileOnly project(path: ':aos')
+
+    api("com.kongzue.stacklabel:StackLabel:1.2.0")
+}
+
+task source_code(type: Jar) {
+    archiveClassifier.set('sources')
+    from android.sourceSets.main.java.srcDirs
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                artifact source_code
+                groupId = maven_group_id
+                artifactId = 'debug'
+                version = lib_version_name
+            }
+        }
+        repositories {
+            maven {
+                allowInsecureProtocol = true
+                url 'http://192.168.1.69:8081/repository/android-release/'
+                credentials {
+                    username 'admin'
+                    password 'admin123'
+                }
+            }
+        }
+    }
+}

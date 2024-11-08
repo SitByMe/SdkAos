@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ShapeButton">
+        <attr name="shape_color" />
+        <attr name="shape_stroke_color" />
+        <attr name="shape_stroke_width" />
+        <attr name="shape_radius" />
+        <attr name="shape_radius_top_left" />
+        <attr name="shape_radius_top_right" />
+        <attr name="shape_radius_bottom_left" />
+        <attr name="shape_radius_bottom_right" />
+    </declare-styleable>
+
+    <declare-styleable name="ShapeConstraintLayout">
+        <attr name="shape_color" />
+        <attr name="shape_stroke_color" />
+        <attr name="shape_stroke_width" />
+        <attr name="shape_radius" />
+        <attr name="shape_radius_top_left" />
+        <attr name="shape_radius_top_right" />
+        <attr name="shape_radius_bottom_left" />
+        <attr name="shape_radius_bottom_right" />
+    </declare-styleable>
+
+    <declare-styleable name="ShapeDrawableTextView">
+        <attr name="shape_color" />
+        <attr name="shape_stroke_color" />
+        <attr name="shape_stroke_width" />
+        <attr name="shape_radius" />
+        <attr name="shape_radius_top_left" />
+        <attr name="shape_radius_top_right" />
+        <attr name="shape_radius_bottom_left" />
+        <attr name="shape_radius_bottom_right" />
+    </declare-styleable>
+
+    <declare-styleable name="ShapeFrameLayout">
+        <attr name="shape_color" />
+        <attr name="shape_stroke_color" />
+        <attr name="shape_stroke_width" />
+        <attr name="shape_radius" />
+        <attr name="shape_radius_top_left" />
+        <attr name="shape_radius_top_right" />
+        <attr name="shape_radius_bottom_left" />
+        <attr name="shape_radius_bottom_right" />
+    </declare-styleable>
+
+    <declare-styleable name="ShapeLinearLayout">
+        <attr name="shape_color" />
+        <attr name="shape_stroke_color" />
+        <attr name="shape_stroke_width" />
+        <attr name="shape_radius" />
+        <attr name="shape_radius_top_left" />
+        <attr name="shape_radius_top_right" />
+        <attr name="shape_radius_bottom_left" />
+        <attr name="shape_radius_bottom_right" />
+    </declare-styleable>
+
+    <declare-styleable name="ShapeRelativeLayout">
+        <attr name="shape_color" />
+        <attr name="shape_stroke_color" />
+        <attr name="shape_stroke_width" />
+        <attr name="shape_radius" />
+        <attr name="shape_radius_top_left" />
+        <attr name="shape_radius_top_right" />
+        <attr name="shape_radius_bottom_left" />
+        <attr name="shape_radius_bottom_right" />
+    </declare-styleable>
+
+    <declare-styleable name="ShapeScrollView">
+        <attr name="shape_color" />
+        <attr name="shape_stroke_color" />
+        <attr name="shape_stroke_width" />
+        <attr name="shape_radius" />
+        <attr name="shape_radius_top_left" />
+        <attr name="shape_radius_top_right" />
+        <attr name="shape_radius_bottom_left" />
+        <attr name="shape_radius_bottom_right" />
+    </declare-styleable>
+
+    <declare-styleable name="ShapeTextClock">
+        <attr name="shape_color" />
+        <attr name="shape_stroke_color" />
+        <attr name="shape_stroke_width" />
+        <attr name="shape_radius" />
+        <attr name="shape_radius_top_left" />
+        <attr name="shape_radius_top_right" />
+        <attr name="shape_radius_bottom_left" />
+        <attr name="shape_radius_bottom_right" />
+    </declare-styleable>
+
+    <declare-styleable name="ShapeTextView">
+        <attr name="shape_color" />
+        <attr name="shape_stroke_color" />
+        <attr name="shape_stroke_width" />
+        <attr name="shape_radius" />
+        <attr name="shape_radius_top_left" />
+        <attr name="shape_radius_top_right" />
+        <attr name="shape_radius_bottom_left" />
+        <attr name="shape_radius_bottom_right" />
+    </declare-styleable>
+
+    <declare-styleable name="ShapeView">
+        <attr name="shape_color" />
+        <attr name="shape_stroke_color" />
+        <attr name="shape_stroke_width" />
+        <attr name="shape_radius" />
+        <attr name="shape_radius_top_left" />
+        <attr name="shape_radius_top_right" />
+        <attr name="shape_radius_bottom_left" />
+        <attr name="shape_radius_bottom_right" />
+    </declare-styleable>
+</resources>

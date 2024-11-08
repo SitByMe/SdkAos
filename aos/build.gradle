@@ -1,0 +1,48 @@
+apply from: "../base_lib_build.gradle"
+apply from: "../config.gradle"
+
+android {
+    namespace 'sbmsdk.aos'
+}
+
+dependencies {
+    api("${dep["androidx.core:core-ktx"]}")
+    api("${dep["androidx.appcompat:appcompat"]}")
+    api("${dep["com.google.android.material:material"]}")
+    api("${dep["androidx.activity:activity-ktx"]}")
+    api("${dep["androidx.startup:startup-runtime"]}")
+
+//    api("com.wwkj.central.icons:wwicons:1.0.4")
+
+    api("${dep["com.blankj:utilcodex"]}")
+    api("${dep["com.google.code.gson:gson"]}")
+}
+
+task source_code(type: Jar) {
+    archiveClassifier.set('sources')
+    from android.sourceSets.main.java.srcDirs
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                artifact source_code
+                groupId = maven_group_id
+                artifactId = 'aos'
+                version = lib_version_name
+            }
+        }
+        repositories {
+            maven {
+                allowInsecureProtocol = true
+                url 'http://192.168.1.69:8081/repository/android-release/'
+                credentials {
+                    username 'admin'
+                    password 'admin123'
+                }
+            }
+        }
+    }
+}

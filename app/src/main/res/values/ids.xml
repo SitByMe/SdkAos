@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="common_salient_video_fullscreen_id" type="id" />
+    <item name="common_salient_video_tiny_id" type="id" />
+
+    <item name="common_xbanner_pointId" type="id" />
+
+    <item name="common_action_bar" type="id" />
+
+    <item name="common_title_bar_back" type="id" />
+    <item name="common_title_bar_back_text" type="id" />
+    <item name="common_title_bar_title" type="id" />
+    <item name="common_title_search_page" type="id" />
+    <item name="common_title_bar_right_img" type="id" />
+    <item name="common_title_bar_right_text" type="id" />
+    <item name="common_id_circle_menu_item_image" type="id"/>
+    <item name="common_id_circle_menu_item_image_big" type="id"/>
+    <item name="common_id_circle_menu_item_text" type="id"/>
+    <item name="common_id_circle_menu_item_center" type="id"/>
+    <item name="common_page_one" type="id" />
+    <item name="common_fl_content_wrapper" type="id" />
+    <item name="common_iv_background" type="id" />
+
+    <item name="common_prison_layout" type="id"/>
+    <item name="common_select_prison_layout" type="id"/>
+    <item name="common_select_prison_tv" type="id"/>
+    <item name="common_scan_add" type="id"/>
+
+    <item name="common_prison_details_layout" type="id"/>
+    <item name="common_prison_image" type="id"/>
+    <item name="common_prison_name" type="id"/>
+    <item name="common_conversation_number" type="id"/>
+    <item name="common_prison_org" type="id"/>
+    <item name="common_prison_info" type="id"/>
+    <item name="common_div" type="id"/>
+    <item name="common_new_select" type="id"/>
+<!--    <item name="common_new_scan_add" type="id"/>-->
+    <item name="common_prison_details" type="id"/>
+</resources>

@@ -1,0 +1,43 @@
+ext {
+    lib_version_name = "1.0.0"
+
+    maven_group_id = 'sbm.sdk.aos'
+
+    versions = [
+            "navigation": "2.5.3",
+    ]
+
+    dep = [
+            "sbmsdk"                                     : "sbmsdk.aos:aos:${lib_version_name}",
+            "sbmsdk-ktx"                                 : "sbmsdk.aos:aos-ktx:${lib_version_name}",
+            "sbmsdk.databinding"                         : "sbmsdk.aos:databinding:${lib_version_name}",
+            "sbmsdk.debug"                               : "sbmsdk.aos:debug:${lib_version_name}",
+
+            "androidx.core:core-ktx"                     : 'androidx.core:core-ktx:1.9.0',
+            "androidx.appcompat:appcompat"               : 'androidx.appcompat:appcompat:1.6.1',
+            "com.google.android.material:material"       : 'com.google.android.material:material:1.9.0',
+            "androidx.constraintlayout:constraintlayout" : 'androidx.constraintlayout:constraintlayout:2.1.3',
+
+            "androidx.activity:activity-ktx"             : 'androidx.activity:activity-ktx:1.6.1',
+            "androidx.fragment:fragment-ktx"             : 'androidx.fragment:fragment-ktx:1.5.7',
+            "androidx.lifecycle:lifecycle-viewmodel-ktx" : 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1',
+
+            "androidx.collection:collection-ktx"         : 'androidx.collection:collection-ktx:1.2.0',
+            "androidx.lifecycle:lifecycle-runtime-ktx"   : 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1',
+            "androidx.lifecycle:lifecycle-livedata-ktx"  : 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1',
+
+            "androidx.navigation:navigation-runtime-ktx" : 'androidx.navigation:navigation-runtime-ktx:${versions["navigation"]}',
+            "androidx.navigation:navigation-fragment-ktx": "androidx.navigation:navigation-fragment-ktx:${versions["navigation"]}",
+            "androidx.navigation:navigation-ui-ktx"      : 'androidx.navigation:navigation-ui-ktx:${versions["navigation"]}',
+
+//            "androidx.room:room-ktx"                     : 'androidx.room:room-ktx:2.6.1',
+
+            "androidx.sqlite:sqlite-ktx"                 : 'androidx.sqlite:sqlite-ktx:2.3.0',
+
+            "androidx.startup:startup-runtime"           : 'androidx.startup:startup-runtime:1.1.1',
+
+            "com.google.code.gson:gson"                  : 'com.google.code.gson:gson:2.8.9',
+
+            "com.blankj:utilcodex"                       : 'com.blankj:utilcodex:1.31.0',
+    ]
+}
