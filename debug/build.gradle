@@ -36,7 +36,7 @@ afterEvaluate {
         repositories {
             maven {
                 allowInsecureProtocol = true
-                url 'http://192.168.1.69:8081/repository/android-release/'
+                url 'http://localhost:8081/repository/android-release/'
                 credentials {
                     username 'admin'
                     password 'admin123'
